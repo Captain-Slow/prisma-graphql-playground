@@ -13,7 +13,7 @@ import {
 import { Inject } from '@nestjs/common';
 import { Post } from '../models/post';
 import { User } from '../models/user';
-import { PrismaService } from '../services/prisma.service';
+import { PrismaService } from '../services/prisma';
 import { PostCreateInput } from './post';
 
 @InputType()
