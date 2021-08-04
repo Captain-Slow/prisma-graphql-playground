@@ -11,10 +11,10 @@ import {
   Field,
 } from '@nestjs/graphql';
 import { Inject } from '@nestjs/common';
-import { Post } from './post';
-import { User } from './user';
-import { PrismaService } from './prisma.service';
-import { PostCreateInput } from './resolvers.post';
+import { Post } from '../models/post';
+import { User } from '../models/user';
+import { PrismaService } from '../services/prisma.service';
+import { PostCreateInput } from './post';
 
 @InputType()
 class UserUniqueInput {
