@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { DefaultAdminModule } from 'nestjs-admin';
 
 import { PrismaService } from '../services/prisma';
 import { PostResolver } from '../resolvers/post';
@@ -14,7 +13,6 @@ import { join } from 'path';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       buildSchemaOptions: { dateScalarMode: 'timestamp' },
     }),
-    DefaultAdminModule,
   ],
   controllers: [],
   providers: [PrismaService, UserResolver, PostResolver, TripResolver],

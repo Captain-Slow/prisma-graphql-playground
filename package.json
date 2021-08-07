@@ -50,7 +50,6 @@
     "graphql-tools": "7.0.5",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
-    "nestjs-admin": "^0.4.1",
     "normalizr": "^3.6.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
