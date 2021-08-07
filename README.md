@@ -1,3 +1,20 @@
+# NestJs Playground
+
+## To implement
+
+### 1. Realtime subscription
+
+- https://www.prisma.io/blog/tutorial-building-a-realtime-graphql-server-with-subscriptions-2758cfc6d427
+- https://github.com/nikolasburk/subscriptions
+
+## Reference
+
+### 1. Examples
+
+- https://github.com/prisma/prisma-examples
+
+#
+
 # GraphQL Server Example with NestJS (code-first)
 
 ## https://github.com/prisma/prisma-examples/tree/dev/typescript/graphql-nestjs

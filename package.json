@@ -19,7 +19,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "build:heroku": "prisma generate"
+    "dev:migrate": "npx prisma migrate dev --name init"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -49,6 +49,9 @@
     "graphql": "15.5.1",
     "graphql-tools": "7.0.5",
     "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "nestjs-admin": "^0.4.1",
+    "normalizr": "^3.6.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "7.3.0"
