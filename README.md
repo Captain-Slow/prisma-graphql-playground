@@ -4,6 +4,7 @@
 
 - https://www.prisma.io/blog/tutorial-building-a-realtime-graphql-server-with-subscriptions-2758cfc6d427
 - https://github.com/nikolasburk/subscriptions
+- https://docs.nestjs.com/graphql/subscriptions
 
 ## Reference
 
@@ -12,6 +13,10 @@
 - https://docs.nestjs.com/security/authorization
 
 #
+
+<details><summary>Original documentation</summary>
+
+
 
 # GraphQL Server Example with NestJS (code-first)
 
@@ -377,3 +382,4 @@ const userWithUpdatedProfile = await prisma.user.update({
 - Share your feedback in the [`prisma2`](https://prisma.slack.com/messages/CKQTGR6T0/) channel on the [Prisma Slack](https://slack.prisma.io/)
 - Create issues and ask questions on [GitHub](https://github.com/prisma/prisma/)
 - Watch our biweekly "What's new in Prisma" livestreams on [Youtube](https://www.youtube.com/channel/UCptAHlN1gdwD89tFM3ENb6w)
+</details>

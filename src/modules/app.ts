@@ -4,7 +4,6 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { PrismaService } from '../services/prisma';
 import { PostResolver } from '../resolvers/post';
 import { UserResolver } from '../resolvers/user';
-import { TripResolver } from '../resolvers/trip';
 import { join } from 'path';
 
 @Module({
@@ -15,6 +14,6 @@ import { join } from 'path';
     }),
   ],
   controllers: [],
-  providers: [PrismaService, UserResolver, PostResolver, TripResolver],
+  providers: [PrismaService, UserResolver, PostResolver],
 })
 export class AppModule {}
