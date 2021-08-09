@@ -1,17 +1,15 @@
 # NestJs Playground
 
-## To implement
-
-### 1. Realtime subscription
+## Realtime subscription
 
 - https://www.prisma.io/blog/tutorial-building-a-realtime-graphql-server-with-subscriptions-2758cfc6d427
 - https://github.com/nikolasburk/subscriptions
 
 ## Reference
 
-### 1. Examples
-
 - https://github.com/prisma/prisma-examples
+
+- https://docs.nestjs.com/security/authorization
 
 #
 
