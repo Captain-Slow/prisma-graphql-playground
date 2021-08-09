@@ -3,18 +3,18 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id          String       @id @default(uuid())
-  email       String       @unique
-  name        String?
-  profile     Profile?
-  posts       Post[]
-  tripsOwned  Trip[]
-  tripsJoined TripMember[]
+  id              String       @id @default(uuid())
+  email           String       @unique
+  name            String?
+  profile         Profile?
+  posts           Post[]
+  trips           Trip[]
+  tripMemberships TripMember[]
 }
 
 model Profile {
@@ -38,6 +38,7 @@ model Post {
 
 model Trip {
   id             String         @id @default(uuid())
+  bannerUrl      String?
   title          String
   startDate      DateTime       @default(now())
   endDate        DateTime       @default(now())

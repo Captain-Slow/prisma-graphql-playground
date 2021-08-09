@@ -2,11 +2,47 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type TripMember {
+  id: String
+  trip: Trip
+  user: User
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
+"""
+`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
+"""
+scalar Timestamp
+
+type TripCategory {
+  id: String
+  title: String!
+  trip: Trip
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
+type Trip {
+  id: String
+  title: String!
+  bannerUrl: String
+  startDate: Timestamp!
+  endDate: Timestamp!
+  owner: User
+  tripMembers: [TripMember!]
+  tripCategories: [TripCategory!]
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
 type User {
   id: String
   email: String!
   name: String
   posts: [Post!]
+  trips: [Trip!]
+  tripMemberships: [TripMember!]
 }
 
 type Post {
@@ -20,16 +56,14 @@ type Post {
   author: User
 }
 
-"""
-`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
-"""
-scalar Timestamp
-
 type Query {
   allUsers: [User!]!
   draftsByUser(userUniqueInput: UserUniqueInput!): [Post!]
+  tripsByUser(userUniqueInput: UserUniqueInput!): [Trip!]
   postById(id: String!): Post
   feed(orderBy: PostOrderByUpdatedAtInput, take: Float, skip: Float, searchString: String): [Post!]!
+  allTrips: [Trip!]!
+  tripById(id: String!): Trip
 }
 
 input UserUniqueInput {
@@ -52,6 +86,7 @@ type Mutation {
   incrementPostViewCount(id: String!): Post!
   togglePublishPost(id: String!): Post
   deletePost(id: String!): Post
+  createTrip(userId: String!, data: TripCreateInput!): Trip!
 }
 
 input UserCreateInput {
@@ -63,4 +98,10 @@ input UserCreateInput {
 input PostCreateInput {
   title: String!
   content: String
+}
+
+input TripCreateInput {
+  title: String!
+  startDate: Timestamp
+  endDate: Timestamp
 }
